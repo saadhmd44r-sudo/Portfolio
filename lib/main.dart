@@ -23,38 +23,49 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Saad Hmaidi',
               style: TextStyle(
                 fontSize: 56,
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
+                fontWeight: FontWeight.bold, // ← bold
               ),
             ),
-            SizedBox(height: 24),
-            Text(
+            const SizedBox(height: 16),
+            const Text(
               'AI Engineering Student',
               style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.w400,
+                fontSize: 24, // ← 26 → 24
                 color: Colors.blueAccent,
               ),
-              ),
-            SizedBox(height: 18),
-            Text(
+            ),
+            const SizedBox(height: 16),
+            const Text(
               "I'm building my way to becoming an AI Engineer.",
               style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w400,
-                color: Colors.blueGrey,
+                fontSize: 18, // ← 24 → 18
+                color: Colors.grey,
               ),
-              ),
-            SizedBox(height: 16),
+            ),
+            const SizedBox(height: 32), // ← espace kbir 9bel l'boutons
+            Row( // ← l'boutons dakhel Row
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('View my work'),
+                ),
+                const SizedBox(width: 16), // ← width, machi height
+                OutlinedButton(
+                  onPressed: () {},
+                  child: const Text('Contact me'),
+                ),
+              ],
+            ),
           ],
         ),
       ),
