@@ -31,26 +31,26 @@ class HomePage extends StatelessWidget {
             Text(
               'Saad Hmaidi',
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 56,
                 fontWeight: FontWeight.w400,
                 color: Colors.white,
               ),
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 24),
             Text(
               'AI Engineering Student',
               style: TextStyle(
                 fontSize: 26,
-                fontWeight: FontWeight.w300,
+                fontWeight: FontWeight.w400,
                 color: Colors.blueAccent,
               ),
               ),
-            SizedBox(height: 16),
+            SizedBox(height: 18),
             Text(
               "I'm building my way to becoming an AI Engineer.",
               style: TextStyle(
                 fontSize: 24,
-                fontWeight: FontWeight.w200,
+                fontWeight: FontWeight.w400,
                 color: Colors.blueGrey,
               ),
               ),
