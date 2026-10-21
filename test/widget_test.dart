@@ -11,5 +11,6 @@ void main() {
     expect(find.text('Saad Hmaidi'), findsOneWidget);
     expect(find.text('AI Engineering Student'), findsOneWidget);
     expect(find.text('View my work'), findsOneWidget);
+    expect(find.text('Portfolio'), findsOneWidget);
   });
 }
