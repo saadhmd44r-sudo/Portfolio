@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/hero_section.dart';
-import 'widgets/project_card.dart';
 import 'widgets/project_section.dart';
+import 'widgets/contact_section.dart';
 
 
 void main() {
@@ -36,6 +36,8 @@ class HomePage extends StatelessWidget {
               HeroSection(),
               SizedBox(height: 120),
               ProjectSection(),
+              SizedBox(height: 120),
+              ContactSection(),
             ],
           ),
         ),
