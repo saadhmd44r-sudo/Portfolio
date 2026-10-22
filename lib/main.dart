@@ -27,10 +27,35 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: ProjectCard(
-          title: 'Portfolio',
-          description: 'My personal website built with Flutter.',
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(vertical: 80),
+        child: Center(
+          child: Column(
+            children: [
+              HeroSection(),
+              SizedBox(height: 120),
+              Text(
+                'Projects',
+                style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 32),
+              Wrap(
+                spacing: 24,
+                runSpacing: 24,
+                alignment: WrapAlignment.center,
+                children: [
+                  ProjectCard(
+                    title: 'Portfolio',
+                    description: 'My personal website built with Flutter.',
+                  ),
+                  ProjectCard(
+                    title: 'Neural Network from Scratch',
+                    description: 'Digit recognition with NumPy only. Coming soon.',
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

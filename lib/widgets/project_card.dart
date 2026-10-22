@@ -14,6 +14,7 @@ class ProjectCard extends StatelessWidget {
 Widget build(BuildContext context) {
   return Container(
     width: 300,
+    height: 160,
     padding: const EdgeInsets.all(24),
     decoration: BoxDecoration(
       color: Colors.white10,
