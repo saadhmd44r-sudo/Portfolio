@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/hero_section.dart';
 import 'widgets/project_card.dart';
+import 'widgets/project_section.dart';
 
 
 void main() {
@@ -34,26 +35,7 @@ class HomePage extends StatelessWidget {
             children: [
               HeroSection(),
               SizedBox(height: 120),
-              Text(
-                'Projects',
-                style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 32),
-              Wrap(
-                spacing: 24,
-                runSpacing: 24,
-                alignment: WrapAlignment.center,
-                children: [
-                  ProjectCard(
-                    title: 'Portfolio',
-                    description: 'My personal website built with Flutter.',
-                  ),
-                  ProjectCard(
-                    title: 'Neural Network from Scratch',
-                    description: 'Digit recognition with NumPy only. Coming soon.',
-                  ),
-                ],
-              ),
+              ProjectSection(),
             ],
           ),
         ),
