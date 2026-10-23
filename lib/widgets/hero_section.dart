@@ -5,12 +5,19 @@ class HeroSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final isMobile = width < 600;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
+        Text(
           'Saad Hmaidi',
-          style: TextStyle(fontSize: 56, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: isMobile ? 40 : 56,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         const SizedBox(height: 16),
         const Text(
@@ -29,7 +36,6 @@ class HeroSection extends StatelessWidget {
           spacing: 16,
           children: [
             ElevatedButton(onPressed: () {}, child: const Text('View my work')),
-            const SizedBox(width: 16),
             OutlinedButton(onPressed: () {}, child: const Text('Contact me')),
           ],
         ),
