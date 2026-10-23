@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
+import 'reveal_on_scroll.dart';
+
 class HeroSection extends StatelessWidget {
-  const HeroSection({super.key});
+  final VoidCallback onViewWork;
+  final VoidCallback onContact;
+
+  const HeroSection({
+    super.key,
+    required this.onViewWork,
+    required this.onContact,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,33 +20,55 @@ class HeroSection extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          'Saad Hmaidi',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: isMobile ? 40 : 56,
-            fontWeight: FontWeight.bold,
+        RevealOnScroll(
+          child: Text(
+            'Saad Hmaidi',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: isMobile ? 40 : 56,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         const SizedBox(height: 16),
-        const Text(
-          'AI Engineering Student',
-          style: TextStyle(fontSize: 24, color: Colors.blueAccent),
+        RevealOnScroll(
+          delay: const Duration(milliseconds: 150),
+          child: Text(
+            'AI Engineering Student',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: isMobile ? 20 : 24,
+              color: Colors.blueAccent,
+            ),
+          ),
         ),
         const SizedBox(height: 16),
-        const Text(
-          "I'm building my way to becoming an AI Engineer.",
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 18, color: Colors.grey),
+        const RevealOnScroll(
+          delay: Duration(milliseconds: 300),
+          child: Text(
+            "I'm building my way to becoming an AI Engineer.",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 18, color: Colors.grey),
+          ),
         ),
         const SizedBox(height: 32),
-        Wrap(
-          alignment: WrapAlignment.center,
-          spacing: 16,
-          children: [
-            ElevatedButton(onPressed: () {}, child: const Text('View my work')),
-            OutlinedButton(onPressed: () {}, child: const Text('Contact me')),
-          ],
+        RevealOnScroll(
+          delay: const Duration(milliseconds: 450),
+          child: Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 16,
+            runSpacing: 12,
+            children: [
+              ElevatedButton(
+                onPressed: onViewWork,
+                child: const Text('View my work'),
+              ),
+              OutlinedButton(
+                onPressed: onContact,
+                child: const Text('Contact me'),
+              ),
+            ],
+          ),
         ),
       ],
     );

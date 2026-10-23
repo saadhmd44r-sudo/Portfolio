@@ -7,6 +7,8 @@ void main() {
     WidgetTester tester,
   ) async {
     await tester.pumpWidget(const MyApp());
+    // Ntsennaw l'animations ysaliw.
+    await tester.pump(const Duration(seconds: 2));
 
     expect(find.text('Saad Hmaidi'), findsOneWidget);
     expect(find.text('AI Engineering Student'), findsOneWidget);
