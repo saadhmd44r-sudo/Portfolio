@@ -20,21 +20,17 @@ class HeroSection extends StatelessWidget {
         const SizedBox(height: 16),
         const Text(
           "I'm building my way to becoming an AI Engineer.",
+          textAlign: TextAlign.center,
           style: TextStyle(fontSize: 18, color: Colors.grey),
         ),
         const SizedBox(height: 32),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        Wrap(
+          alignment: WrapAlignment.center,
+          spacing: 16,
           children: [
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('View my work'),
-            ),
+            ElevatedButton(onPressed: () {}, child: const Text('View my work')),
             const SizedBox(width: 16),
-            OutlinedButton(
-              onPressed: () {},
-              child: const Text('Contact me'),
-            ),
+            OutlinedButton(onPressed: () {}, child: const Text('Contact me')),
           ],
         ),
       ],

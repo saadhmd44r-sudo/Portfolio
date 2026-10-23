@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(vertical: 80),
+        padding: EdgeInsets.symmetric(vertical: 80, horizontal: 24),
         child: Center(
           child: Column(
             children: [
