@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
+
+  Future<void> _openLink(String url) async { // ← jdid
+    await launchUrl(Uri.parse(url));         // ← jdid
+  }                         
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +39,7 @@ class ContactSection extends StatelessWidget {
             ),
             const SizedBox(width: 16),
             TextButton.icon(
-              onPressed: () {},
+              onPressed: () => _openLink('https://www.linkedin.com/in/saad-hmaidi/'),
               icon: const Icon(Icons.work),
               label: const Text('LinkendIn'),
             ),
